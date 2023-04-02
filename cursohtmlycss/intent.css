@@ -1,0 +1,111 @@
+.mari{
+  font-family: 'Press Start 2P', cursive;
+}
+.cartoon {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  
+}
+
+
+.cartoon {
+  --body: #630;
+}
+
+ 
+.body {
+  width: 4%;
+  height: 4%;
+  background: var(--body);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body::before {
+  width: 60%;
+  height: 1000%;
+  background: var(--body);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+
+.body::after {
+  width: 150%;
+  height: 400%;
+  background: var(--body);
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+
+.wing-top {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: -0.125%;
+  background: linear-gradient(red, skyblue);
+  border-radius: 20% 100% 10% 80%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  box-shadow: 
+    inset 3.5vmin 1.5vmin 0 1vmin,
+    inset -0.5vmin 0 0 1vmin;
+  animation: wingTopFlap1 2s linear infinite;
+  overflow: hidden;
+}
+
+
+
+
+.wing-top ~ .wing-top {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+ 
+}
+
+
+.wing-bottom {
+  width: 28%;
+  height: 40%;
+  background: linear-gradient(95deg, blue, yellow);
+  border-radius: 100% / 125% 125% 70% 50%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 27.5%;
+  box-shadow: inset 1vmin -2vmin 0 0.5vmin;
+  animation: wingBottomFlap1 2s linear infinite;
+  overflow: hidden;
+}
+
+.wing-bottom ~ .wing-bottom {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  
+}
+
