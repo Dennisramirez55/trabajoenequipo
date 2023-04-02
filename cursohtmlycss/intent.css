@@ -3,7 +3,7 @@
 }
 .cartoon {
   position: absolute;
-  top: 100%;
+  top: 130%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vmin;
